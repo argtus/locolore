@@ -1,4 +1,4 @@
-# My Presentation
+# Train Presentation with Reveal.js
 
 This is a presentation about trains - generated with AI. It's built with [Reveal.js](https://revealjs.com/).
 
