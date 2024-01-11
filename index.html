@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Trains - A Presentation</title>
+
+        <link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<style>
+			.content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				animation: 2s ease-out 0s 1 slideInFromLeft;
+				will-change: transform, opacity;
+			}
+
+			.framed-picture {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 80%; /* Adjust this to change the picture size */
+				border: 2px solid #FFF; /* Add a border */
+				box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Add a shadow */
+			}
+
+			@keyframes slideInFromLeft {
+			0% {
+				transform: translateX(-100%);
+				opacity: 0;
+			}
+			100% {
+				transform: translateX(0);
+				opacity: 1;
+			}
+			}
+
+			.content {
+			animation: 2s ease-out 0s 1 slideInFromLeft;
+			}
+		</style>
+	</head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+				<section>
+					<div class="content">
+						<h1>Trains</h1>
+						<p>Trains are a form of rail transport consisting of a series of connected vehicles that generally run along a railroad track to transport cargo or passengers.</p>
+						<img class="framed-picture" src="JR_Series-N700S-J30_Nozomi-4.jpg" alt="N700S Nozomi Shinkansen">
+					</div>
+				</section>
+				<section>
+					<h2>History of Trains</h2>
+					<p>The history of trains dates back to the 6th century B.C. In the modern world, the British engineer George Stephenson built the first public inter-city railway line in the world to use steam locomotives, the Liverpool and Manchester Railway, which opened in 1830.</p>
+					<iframe src="https://giphy.com/embed/8F3bK4aq1tCo0TLkf7" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://catalog.archives.gov/id/7408705">US National Archives</a></p>
+				</section>
+				<section>
+					<h2>Types of Trains</h2>
+					<p>There are many different types of trains, including freight trains, passenger trains, subway trains, monorails, and high-speed rail. Each type of train serves a specific purpose and has its own unique features.</p>
+				</section>
+
+				<script>
+					document.getElementById('quiz-form').addEventListener('submit', function(event) {
+						event.preventDefault();
+						var answer = document.querySelector('input[name="quiz"]:checked').value;
+						var result = document.getElementById('quiz-result');
+						if (answer === 'option2') {
+							result.textContent = 'Correct!';
+							result.style.color = 'green';
+						} else {
+							result.textContent = 'Incorrect. The correct answer is Maglev.';
+							result.style.color = 'red';
+						}
+					});
+				</script>
+				<section>
+					<h2>Future of Trains</h2>
+					<p>The future of trains looks promising with advancements in technology. Concepts like hyperloop and maglev trains could revolutionize the way we think about rail transport. Additionally, the push for more sustainable and energy-efficient transport could see more electric trains in the future.</p>
+				</section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script>
+			// Initialize Reveal.js
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+            });
+        </script>
+    </body>
+</html>
